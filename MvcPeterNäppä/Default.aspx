@@ -1,12 +1,22 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="MvcPeterNäppä._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <STYLE>
+        #table1{border: black
+                        solid
+                        thin;}
+        #table1tr { }
+        #DataList2{border-top: thin
+                               black
+                               solid
+        }
+    </style>
     <BODY>
     
     <H3>File upload / Download from/to database</h3>
     <DIV>
-        <TABLE>
-            <TR>
+        <TABLE id="table1">
+            <TR id="table1tr">
                 <TD style="width: 220px">Select File:</td>
                 <TD>
                     <asp:FileUpload ID="FileUpload1" runat="server" />
@@ -26,11 +36,11 @@
             <br />
             <TR>
                 <br />
-                <TD style="width: 220px"><asp:Button ID="removebtn" runat="server" Text="Remove" OnClick="removebtn_Click" /> <asp:TextBox ID="txtbxremove" runat="server"></asp:TextBox>
+                <TD style="width: 220px" id="table2"><asp:Button ID="removebtn" runat="server" Text="Remove" OnClick="removebtn_Click" /> <asp:TextBox ID="txtbxremove" runat="server"></asp:TextBox>
                     <asp:Label ID="Label1" runat="server" Text="Label">Write the ID number of the video you want to remove</asp:Label>
                 </td>
             </tr>
-        </table>
+        </TABLE>
         <BR/>
         <asp:Button ID="VIdeotoDownload" runat="server" Text="Enable Download" OnClick="VIdeotoDownload_Click" />
 &nbsp;<asp:TextBox ID="Videonametodownload" runat="server"></asp:TextBox> <LABEL>Write the name of the video you want to rent and then click Enable Download, &nbsp; 
@@ -53,7 +63,7 @@
         <BR/>
         <BR/>
         <asp:Label ID="Label4" runat="server" Text="Label">Uploaded Videos</asp:Label>
-        <DIV>
+        <DIV id="div1">
             <asp:DataList ID="DataList1" runat="server" RepeatColumns="4" RepeatDirection="Horizontal" OnSelectedIndexChanged="DataList1_SelectedIndexChanged" OnItemCommand="DataList1_ItemCommand" Visible="True">
                 <ItemTemplate>
                     <TABLE>
@@ -77,7 +87,7 @@
             
 
             <BR/>
-        </div>
+        </DIV>
         <asp:DataList ID="DataList2" runat="server" RepeatColumns="4" RepeatDirection="Horizontal" OnSelectedIndexChanged="DataList2_OnSelectedIndexChanged" OnItemCommand="DataList2_OnItemCommand">
             <ItemTemplate>
                 <TABLE>

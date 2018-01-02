@@ -21,6 +21,7 @@ namespace MvcPeterNäppä
             if (!IsPostBack)
             {
                 PopulateFiles();
+                
             }
 
 

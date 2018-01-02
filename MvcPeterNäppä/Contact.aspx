@@ -2,16 +2,16 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %>.</h2>
-    <h3>Your contact page.</h3>
+    <h3>Pretend contact Info to Me Peter.</h3>
     <address>
-        One Microsoft Way<br />
-        Redmond, WA 98052-6399<br />
+        Gatan 123<br />
+        97795 Luleå<br />
         <abbr title="Phone">P:</abbr>
-        425.555.0100
+        070-1234567
     </address>
 
     <address>
-        <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-        <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+        <strong>Support:</strong>   <a href="mailto:Support@example.com">PeterMVCSupport@example.com</a><br />
+        
     </address>
 </asp:Content>
