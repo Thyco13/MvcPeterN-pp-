@@ -8,10 +8,12 @@ namespace MvcPeterNäppä.Controllers
 {
     public class DefaultController : Controller
     {
+        LinqToSQLclassDataContext dc = new LinqToSQLclassDataContext();
         // GET: Default
         public ActionResult Index()
         {
-            return View();
+            var movies = dc.UploadedFiles.ToList();
+            return View(movies);
             
         }
 
@@ -33,6 +35,7 @@ namespace MvcPeterNäppä.Controllers
         {
             try
             {
+                
                 // TODO: Add insert logic here
 
                 return RedirectToAction("Index");
